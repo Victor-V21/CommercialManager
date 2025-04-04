@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace GestorComercial.API.Controllers
+namespace CommercialManager.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

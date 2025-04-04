@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("GestorComercial.API")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CommercialManager.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("GestorComercial.API")]
-[assembly: System.Reflection.AssemblyTitleAttribute("GestorComercial.API")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0a773d54d642dd6ec5bf19b49230ce0a68ca44c")]
+[assembly: System.Reflection.AssemblyProductAttribute("CommercialManager.API")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CommercialManager.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

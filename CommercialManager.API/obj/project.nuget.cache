@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "swpt7ONaMRE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://api.nuget.org/v3/index.json."
+    }
+  ]
+}

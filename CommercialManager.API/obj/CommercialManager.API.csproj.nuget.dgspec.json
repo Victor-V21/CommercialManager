@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\GestorComercial.API.csproj": {}
+    "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\GestorComercial.API.csproj": {
+    "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\GestorComercial.API.csproj",
-        "projectName": "GestorComercial.API",
-        "projectPath": "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\GestorComercial.API.csproj",
+        "projectUniqueName": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
+        "projectName": "CommercialManager.API",
+        "projectPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
         "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\obj\\",
+        "outputPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,4 +1,4 @@
-namespace GestorComercial.API
+namespace CommercialManager.API
 {
     public class WeatherForecast
     {

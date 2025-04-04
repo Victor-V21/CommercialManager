@@ -81,11 +81,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\GestorComercial.API.csproj",
-      "projectName": "GestorComercial.API",
-      "projectPath": "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\GestorComercial.API.csproj",
+      "projectUniqueName": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
+      "projectName": "CommercialManager.API",
+      "projectPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
       "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor\\projects\\Proyecto\\GestorComercial\\GestorComercial.API\\obj\\",
+      "outputPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -151,5 +151,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

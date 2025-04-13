@@ -3,11 +3,12 @@ using CommercialManager.API.Database;
 using CommercialManager.API.Database.Entities;
 using CommercialManager.API.Dtos;
 using CommercialManager.API.Dtos.Categories;
+using CommercialManager.API.Services.Interfaces;
 
 namespace CommercialManager.API.Services
 {
 
-    public class CategoriesServices
+    public class CategoriesServices : ICategoriesServices
     {
 
         private readonly CommercialDbContext _context;

@@ -1,0 +1,23 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/products
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Cucharas",
+    "description": "Plata de color rosa ",
+    "price": 300,
+    "stock": 11,
+    "discount": 0.5,
+    "categoryId": "C53180CE-2899-471A-9754-0AF8793D9A1D"
+  
+  }
+}

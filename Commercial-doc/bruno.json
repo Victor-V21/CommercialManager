@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Commercial-doc",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

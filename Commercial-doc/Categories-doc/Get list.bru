@@ -1,0 +1,17 @@
+meta {
+  name: Get list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/categories?page=1&pageSize=1&searchTerm=r
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  pageSize: 1
+  searchTerm: r
+}

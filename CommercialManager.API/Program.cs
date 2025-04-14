@@ -1,5 +1,9 @@
 using CommercialManager.API.Database;
+using CommercialManager.API.Helpers;
+using CommercialManager.API.Services;
+using CommercialManager.API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging.Abstractions;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +12,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CommercialDbContext>(option =>
     option.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
 // Add services to the container.
 
+builder.Services.AddAutoMapper(typeof(AutomapperProfiles));
+
 // ------ Services ------
+
+builder.Services.AddTransient<ICategoriesServices, CategoriesServices>();
+builder.Services.AddTransient<IProductsServices, ProductsServices>();
+builder.Services.AddTransient<IShoppingCartsServices, ShoppingCartsServices>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

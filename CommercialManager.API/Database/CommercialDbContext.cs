@@ -12,12 +12,12 @@ namespace CommercialManager.API.Database
 
         // Tablas de la base de datos
 
-        DbSet<UserEntity> Users { get; set; }
-        DbSet<ShoppingCartEntity> ShoppingCarts { get; set; }
-        DbSet<ShoppingCartDetailEntity> ShoppingCartDetails { get; set; }
-        DbSet<ProductEntity> Products { get; set; }
-        DbSet<SalesEntity> Sales { get; set; }
-        DbSet<SalesDetailEntity> SalesDetails { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
+        public DbSet<ShoppingCartEntity> ShoppingCarts { get; set; }
+        public DbSet<ShoppingCartDetailEntity> ShoppingCartDetails { get; set; }
+        public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<SalesEntity> Sales { get; set; }
+        public DbSet<SalesDetailEntity> SalesDetails { get; set; }
         DbSet<CategoryEntity> Categories { get; set; }
     }
 }

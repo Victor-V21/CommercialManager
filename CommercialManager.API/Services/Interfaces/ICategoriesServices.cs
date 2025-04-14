@@ -1,5 +1,5 @@
-﻿using CommercialManager.API.Dtos;
-using CommercialManager.API.Dtos.Categories;
+﻿using CommercialManager.API.Dtos.Categories;
+using CommercialManager.API.Dtos.Common;
 
 namespace CommercialManager.API.Services.Interfaces
 {

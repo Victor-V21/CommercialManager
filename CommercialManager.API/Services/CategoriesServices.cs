@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using CommercialManager.API.Database;
 using CommercialManager.API.Database.Entities;
-using CommercialManager.API.Dtos;
 using CommercialManager.API.Dtos.Categories;
+using CommercialManager.API.Dtos.Common;
 using CommercialManager.API.Services.Interfaces;
 
 namespace CommercialManager.API.Services

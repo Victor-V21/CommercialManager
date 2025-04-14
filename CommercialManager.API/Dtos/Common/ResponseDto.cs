@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace CommercialManager.API.Dtos
+namespace CommercialManager.API.Dtos.Common
 {
     public class ResponseDto<T>
     {

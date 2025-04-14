@@ -1,0 +1,18 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PATH}}/categories
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"Joyeria",
+    "description":"lujo"
+  }
+}

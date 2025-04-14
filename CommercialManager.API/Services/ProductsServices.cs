@@ -25,12 +25,13 @@ namespace CommercialManager.API.Services
         public async Task<ResponseDto<ProductsActionResponseDto>> CreateAsync(ProductsCreateDto dto)
         {
             var productEntity = _mapper.Map<ProductEntity>(dto);
-            _context.Products.Add(productEntity);
+                _context.Products.Add(productEntity);
+
             await _context.SaveChangesAsync();
 
             return new ResponseDto<ProductsActionResponseDto>
             {
-                StatusCode = HttpStatusCode.CREATED,
+                StatusCode = Constants.HttpStatusCode.CREATED,
                 Status = true,
                 Message = "Registro creado correctamente",
                 Data = _mapper.Map<ProductsActionResponseDto>(productEntity)

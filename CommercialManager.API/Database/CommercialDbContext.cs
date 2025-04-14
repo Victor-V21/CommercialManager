@@ -18,6 +18,6 @@ namespace CommercialManager.API.Database
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<SalesEntity> Sales { get; set; }
         public DbSet<SalesDetailEntity> SalesDetails { get; set; }
-        DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<CategoryEntity> Categories { get; set; }
     }
 }

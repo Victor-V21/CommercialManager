@@ -1,26 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\",
+  "WorkspaceRootPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\ferchita\\projects\\proyecto-final\\commercialmanager\\commercialmanager.api\\services\\productsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\productsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\services\\categoriesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\categoriesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\ferchita\\projects\\proyecto-final\\commercialmanager\\commercialmanager.api\\dtos\\products\\productscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\products\\productscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\services\\interfaces\\icategoriesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\interfaces\\icategoriesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\ferchita\\projects\\proyecto-final\\commercialmanager\\commercialmanager.api\\dtos\\products\\productsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\products\\productsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\ferchita\\projects\\proyecto-final\\commercialmanager\\commercialmanager.api\\dtos\\products\\productsactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\products\\productsactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\ferchita\\projects\\proyecto-final\\commercialmanager\\commercialmanager.api\\dtos\\products\\productseditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\products\\productseditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,76 +26,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductsEditDto.cs",
-              "DocumentMoniker": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsEditDto.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\Products\\ProductsEditDto.cs",
-              "ToolTip": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsEditDto.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\Products\\ProductsEditDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AutomapperProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
+              "RelativeToolTip": "CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T01:07:57.839Z",
+              "WhenOpened": "2025-04-14T01:51:19.661Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "CommercialManager.API\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAABEAAACgzMzMzMwmwBwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T04:31:38.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductsCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
-              "ToolTip": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Title": "ICategoriesServices.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\Interfaces\\ICategoriesServices.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\Interfaces\\ICategoriesServices.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\Interfaces\\ICategoriesServices.cs",
+              "RelativeToolTip": "CommercialManager.API\\Services\\Interfaces\\ICategoriesServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T01:07:21.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductsDto.cs",
-              "DocumentMoniker": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsDto.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\Products\\ProductsDto.cs",
-              "ToolTip": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsDto.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\Products\\ProductsDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T01:06:55.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductsActionResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsActionResponseDto.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\Products\\ProductsActionResponseDto.cs",
-              "ToolTip": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsActionResponseDto.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\Products\\ProductsActionResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T01:06:02.721Z",
+              "WhenOpened": "2025-04-14T04:07:07.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductsServices.cs",
-              "DocumentMoniker": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Services\\ProductsServices.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\ProductsServices.cs",
-              "ToolTip": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Services\\ProductsServices.cs",
-              "RelativeToolTip": "CommercialManager.API\\Services\\ProductsServices.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAAuAAAAAAAAAA==",
+              "Title": "CategoriesServices.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\CategoriesServices.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\CategoriesServices.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\CategoriesServices.cs",
+              "RelativeToolTip": "CommercialManager.API\\Services\\CategoriesServices.cs",
+              "ViewState": "AgIAADQAAACAZmZmZmYuwEAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T00:52:19.71Z",
+              "WhenOpened": "2025-04-14T03:42:33.081Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

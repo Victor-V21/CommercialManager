@@ -20,6 +20,7 @@ builder.Services.AddAutoMapper(typeof(AutomapperProfiles));
 // ------ Services ------
 
 builder.Services.AddTransient<ICategoriesServices, CategoriesServices>();
+builder.Services.AddTransient<IUsersServices,  UsersServices>();
 builder.Services.AddTransient<IProductsServices, ProductsServices>();
 builder.Services.AddTransient<IShoppingCartsServices, ShoppingCartsServices>();
 

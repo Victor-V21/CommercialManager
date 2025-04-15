@@ -1,0 +1,22 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{PATH}}/users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "dni":"0801200417420",
+    "firstname":"juan",
+    "lastname":"perez",
+    "email":"perezj12@gmail.com",
+    "gender":"M",
+    "age": 12
+  }
+}

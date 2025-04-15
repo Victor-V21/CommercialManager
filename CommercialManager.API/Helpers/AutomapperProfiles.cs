@@ -2,6 +2,7 @@
 using CommercialManager.API.Database.Entities;
 using CommercialManager.API.Dtos.Categories;
 using CommercialManager.API.Dtos.Products;
+using CommercialManager.API.Dtos.Users;
 
 namespace CommercialManager.API.Helpers
 {
@@ -13,9 +14,7 @@ namespace CommercialManager.API.Helpers
             // Mappers of CategoryServices
 
             CreateMap<CategoryCreateDto, CategoryEntity>();
-
             CreateMap<CategoryEntity, CategoryDto>().ReverseMap();
-
             CreateMap<CategoryEntity, CategoryActionResponseDto>().ReverseMap();
 
             // Mappers of ProductsServices
@@ -25,9 +24,13 @@ namespace CommercialManager.API.Helpers
             CreateMap<ProductEntity, ProductsDto>();
             CreateMap<ProductEntity, ProductsActionResponseDto>();
 
+            // Mappers of UsersServices
 
-            // Others Mappers ...
+            CreateMap<UsersCreateDto, UserEntity>();
+            CreateMap<UserEntity, UsersDto>().ReverseMap();
+            CreateMap<UserEntity, UsersActionResponseDto>().ReverseMap();
 
+            // Others Mappers profiles ...
         }
     }
 }

@@ -14,7 +14,7 @@ namespace CommercialManager.API.Database.Entities
 
         [Required]
         [Column("dni")]
-        public int DNI { get; set; }
+        public string DNI { get; set; }
 
         [Required]
         [Column("firstname")]
@@ -27,6 +27,10 @@ namespace CommercialManager.API.Database.Entities
         [Required]
         [Column("email")]
         public string Email { get; set; }
+
+        [Required]
+        [Column("gender")]
+        public string Gender { get; set; }
 
         [Required]
         [Column("age")]

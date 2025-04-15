@@ -1,0 +1,22 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{PATH}}/users/a3d0dd22-50a5-46dc-96c0-0948d0f87d14
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "dni":"0801200417420",
+    "firstname":"Juana",
+    "lastname":"perez",
+    "email":"perezj12@gmail.com",
+    "gender":"F",
+    "age": 121
+  }
+}

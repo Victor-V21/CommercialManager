@@ -1,0 +1,17 @@
+meta {
+  name: Get list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/users?page=1&pageSize=12
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  pageSize: 12
+  ~searchTerm: perez
+}

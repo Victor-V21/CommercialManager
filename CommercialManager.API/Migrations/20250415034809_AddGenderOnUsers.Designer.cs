@@ -3,6 +3,7 @@ using System;
 using CommercialManager.API.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CommercialManager.API.Migrations
 {
     [DbContext(typeof(CommercialDbContext))]
-    partial class CommercialDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250415034809_AddGenderOnUsers")]
+    partial class AddGenderOnUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.4");
@@ -193,9 +196,8 @@ namespace CommercialManager.API.Migrations
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
-                    b.Property<string>("DNI")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
+                    b.Property<int>("DNI")
+                        .HasColumnType("INTEGER")
                         .HasColumnName("dni");
 
                     b.Property<string>("Email")

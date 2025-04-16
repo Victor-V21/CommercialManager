@@ -1,6 +1,8 @@
-﻿namespace CommercialManager.API.Services
+﻿using CommercialManager.API.Services.Interfaces;
+
+namespace CommercialManager.API.Services
 {
-    public class SalesServices
+    public class SalesServices : ISalesServices
     {
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommercialManager.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c0082ee75c1a382304b1e6ccd1b74fb84a7246")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b777c7b945e660e22eedb3cd1b98e18d20f8fb35")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommercialManager.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommercialManager.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

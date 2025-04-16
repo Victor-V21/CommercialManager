@@ -23,6 +23,7 @@ builder.Services.AddTransient<ICategoriesServices, CategoriesServices>();
 builder.Services.AddTransient<IUsersServices,  UsersServices>();
 builder.Services.AddTransient<IProductsServices, ProductsServices>();
 builder.Services.AddTransient<IShoppingCartsServices, ShoppingCartsServices>();
+builder.Services.AddTransient<ISalesServices, SalesServices>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

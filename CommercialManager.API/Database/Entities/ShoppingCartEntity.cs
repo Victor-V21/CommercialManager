@@ -18,8 +18,10 @@ namespace CommercialManager.API.Database.Entities
         [Column("create_date")]
         public DateTime CreateDate { get; set; }
 
+        [Column("total_items")]
+        public int TotalItems { get; set; }
+
         // Llaves Foraneas
-        
         [Required]
         [ForeignKey(nameof(UserId))]
         public virtual UserEntity User { get; set; }

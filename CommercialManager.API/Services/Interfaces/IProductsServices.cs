@@ -9,5 +9,6 @@ namespace CommercialManager.API.Services.Interfaces
         Task<ResponseDto<ProductsActionResponseDto>> DeleteAsync(Guid id);
         Task<ResponseDto<ProductsActionResponseDto>> EditAsync(ProductsEditDto dto, Guid id);
         Task<ResponseDto<PaginationDto<List<ProductsDto>>>> GetListAsync(string searchTerm = "", int page = 1, int pageSize = 0);
+        Task<ResponseDto<ProductsActionResponseDto>> GetOneByIdAsync(Guid id);
     }
 }

@@ -42,7 +42,8 @@ namespace CommercialManager.API.Services
             };
 
         }
-        // ----To edit products----
+        // ----To List products----
+
         public async Task<ResponseDto<PaginationDto<List<ProductsDto>>>> GetListAsync(
             string searchTerm = "", int page = 1, int pageSize = 0
             )
@@ -116,6 +117,31 @@ namespace CommercialManager.API.Services
                 Data = _mapper.Map<ProductsActionResponseDto>(productEntity)
             };
 
+        }
+        // ----In listing one product----
+
+        public async Task<ResponseDto<ProductsActionResponseDto>> GetOneByIdAsync(Guid id)
+        {
+            var response = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (response == null)
+            {
+                return new ResponseDto<ProductsActionResponseDto>
+                {
+                    StatusCode = HttpStatusCode.BAD_REQUEST,
+                    Status = false,
+                    Message = "No se encontro el registro",
+                    Data = null
+                };
+            }
+
+            return new ResponseDto<ProductsActionResponseDto>
+            {
+                StatusCode = HttpStatusCode.OK,
+                Status = true,
+                Message = "Registro Encontrado Correctamente",
+                Data = _mapper.Map<ProductsActionResponseDto>(response)
+            };
         }
 
         // ----Products Delete----

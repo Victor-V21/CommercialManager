@@ -1,4 +1,4 @@
-﻿using CommercialManager.API.Dtos.Categories;
+﻿using CommercialManager.API.Database.Entities;
 using CommercialManager.API.Dtos.Common;
 using CommercialManager.API.Dtos.Products;
 using CommercialManager.API.Services.Interfaces;
@@ -38,6 +38,17 @@ namespace CommercialManager.API.Controllers
         string searchTerm = "", int page = 1, int pageSize = 0)
         {
             var response = await _productsServices.GetListAsync(searchTerm, page, pageSize);
+
+            return StatusCode(response.StatusCode, response);
+        }
+
+        //Get One 
+
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ResponseDto<ProductsActionResponseDto>>> GetCategory(Guid id)
+        {
+            var response = await _productsServices.GetOneByIdAsync(id);
 
             return StatusCode(response.StatusCode, response);
         }

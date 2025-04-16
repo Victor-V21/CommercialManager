@@ -23,8 +23,8 @@ namespace CommercialManager.API.Helpers
 
             CreateMap<ProductsCreateDto, ProductEntity>();
             CreateMap<ProductsEditDto, ProductEntity>();
-            CreateMap<ProductEntity, ProductsDto>();
-            CreateMap<ProductEntity, ProductsActionResponseDto>();
+            CreateMap<ProductEntity, ProductsDto>().ReverseMap();
+            CreateMap<ProductEntity, ProductsActionResponseDto>().ReverseMap();
 
             // Mappers of UsersServices
 

@@ -4,7 +4,10 @@ using CommercialManager.API.Dtos.CartsShoppings;
 using CommercialManager.API.Dtos.CartsShoppings.Details;
 using CommercialManager.API.Dtos.Categories;
 using CommercialManager.API.Dtos.Products;
+using CommercialManager.API.Dtos.Sales.Details;
+using CommercialManager.API.Dtos.Sales;
 using CommercialManager.API.Dtos.Users;
+using CommercialManager.API.Dtos.Sales.Invoice;
 
 namespace CommercialManager.API.Helpers
 {
@@ -36,6 +39,20 @@ namespace CommercialManager.API.Helpers
             CreateMap<CartCreateDto, ShoppingCartEntity>().ReverseMap();
             CreateMap<CartDetailDto, ShoppingCartDetailEntity>().ReverseMap();
             CreateMap<CartDto, CartCreateDto>().ReverseMap();
+
+            // Mappers of SalesService
+
+            //Details Sales
+            CreateMap<SalesDetailEntity, SaleDetailDto>().ReverseMap();
+            CreateMap<SaleDetailCreateDto, SalesDetailEntity>();
+
+            //Sales 
+            CreateMap<SalesEntity, SalesDto>().ReverseMap();
+            CreateMap<SaleCreateDto, SalesEntity>();
+            CreateMap<SalesEntity, InvoiceDto>();
+            //billing sales details
+            CreateMap<SalesDetailEntity, InvoiceItemDto>();
+            CreateMap<SalesEntity, SaleActionResponseDto>();
 
             // Others Mappers profiles ...
         }

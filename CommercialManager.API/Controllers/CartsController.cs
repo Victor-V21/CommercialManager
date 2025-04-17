@@ -22,5 +22,14 @@ namespace CommercialManager.API.Controllers
 
             return StatusCode(response.StatusCode, response);
         }
+        
+        // Get one car by id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ResponseDto<CartDto>>> GetCartById(Guid id)
+        {
+            var response = await _services.GetCartAsync(id);
+            
+            return StatusCode(response.StatusCode, response);
+        }
     }
 }

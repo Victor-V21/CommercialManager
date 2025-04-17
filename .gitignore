@@ -72,4 +72,21 @@ Thumbs.db
 # Configuracion de entornos
 .env
 
+# Edit git
+*.vs
+*.db
+*.suo
+*.pdb
+*.bin
+*.obj
+.vs/
+*.db
+*.dll
+*.pdb
+*.suo
+*.v2
+*.cache
+*.bin
+*.vsidx
+*.csproj.user
 # End of https://www.toptal.com/developers/gitignore/api/images

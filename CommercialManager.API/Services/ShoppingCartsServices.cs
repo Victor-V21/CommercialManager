@@ -3,6 +3,7 @@ using CommercialManager.API.Constants;
 using CommercialManager.API.Database;
 using CommercialManager.API.Database.Entities;
 using CommercialManager.API.Dtos.CartsShoppings;
+using CommercialManager.API.Dtos.CartsShoppings.Details;
 using CommercialManager.API.Dtos.Common;
 using CommercialManager.API.Services.Interfaces;
 using Microsoft.Data.Sqlite;
@@ -49,7 +50,7 @@ namespace CommercialManager.API.Services
                             {
                                 StatusCode = HttpStatusCode.BAD_REQUEST,
                                 Status = false,
-                                Message = "Registro no encontrado"
+                                Message = "Registro no encontrado" // el usuario no existe
                             };
                         }
 
@@ -68,30 +69,95 @@ namespace CommercialManager.API.Services
                         {
                             StatusCode = HttpStatusCode.BAD_REQUEST,
                             Status = false,
-                            Message = "ITEMS no encontrado"
+                            Message = "Items no encontrado"
                         };
                     }
 
-                    // Pasa los items ingresados a una variable
-                    var cartDetails = _mapper.Map<List<ShoppingCartDetailEntity>>(dto.Items);
-                    // Declarar sus variables independienemente
-                    
-                    cartDetails = cartDetails.Select(x => new ShoppingCartDetailEntity
+                    // Validar que todos los productos existen en la base de datos
+                    var productIds = dto.Items.Select(x => x.ProductId).ToList();
+
+                    var existingProductIds = await _context.Products
+                        .Where(x => productIds.Contains(x.Id)) 
+                        //x => x.id = id
+                        .Select(x => x.Id)
+                        .ToListAsync();
+
+                    var invalidProducts = productIds.Except(existingProductIds).ToList();
+
+                    // Si hay productos invalidos en la lista, se enviaran
+                    if (invalidProducts.Any())
                     {
-                        Id = Guid.NewGuid(),
-                        ProductId = x.ProductId,
-                        Quantity = x.Quantity,
-                        ShoppingCartId = id
-                    }).ToList();
+                        return new ResponseDto<CartDto>
+                        {
+                            StatusCode = HttpStatusCode.BAD_REQUEST,
+                            Status = false,
+                            Message = $"Los siguietes productos no existen: {string.Join(", ", invalidProducts)}"
+                        };
+                    }
 
-                    _context.ShoppingCartDetails.AddRange(cartDetails);
 
+                    // Si existe el producto en cart le suma la cantidad, si no, crea un registro
+                    foreach (var item in dto.Items)
+                    {
+                        var product = await _context.Products
+                            .FirstOrDefaultAsync(p => p.Id == item.ProductId);
+
+                        var price = product.Price;
+                        var discount = product.Discount;
+                        var quantity = item.Quantity;
+                        var subtotal = (price - discount * price) * quantity;
+
+                        var existingDetail = await _context.ShoppingCartDetails
+                            .FirstOrDefaultAsync(x => x.ShoppingCartId == cartEntity.UserId && x.ProductId == item.ProductId);
+
+                        if (existingDetail != null)
+                        {
+                            // Actualiza cantidad y subtotal
+                            existingDetail.Quantity += quantity;
+                            existingDetail.Subtotal = (decimal)(price - discount * price) * existingDetail.Quantity;
+                            //                          ^^ Esto me daba un error
+                            _context.ShoppingCartDetails.Update(existingDetail);
+                        }
+                        else
+                        {
+                            var newDetail = new ShoppingCartDetailEntity
+                            {
+                                Id = Guid.NewGuid(),
+                                ProductId = item.ProductId,
+                                Quantity = quantity,
+                                ShoppingCartId = cartEntity.UserId,
+                                Subtotal = (decimal)subtotal
+                            };
+                            _context.ShoppingCartDetails.Add(newDetail);
+                        }
+                    }
+
+                    // Guarda los datos modificados o añadidos para luego continuar con la tabla madre
                     await _context.SaveChangesAsync();
-                    transaction.Commit();
 
+                    // Calcula el total de los subtotales de los detalles del carrito
+                    var totalCartAmount = await _context.ShoppingCartDetails
+                        .Where(x => x.ShoppingCartId == id)
+                        .SumAsync(x => x.Subtotal);
+
+                    cartEntity.TotalAmount = totalCartAmount;
+
+                    //Generando response para retornar los valores
                     var response = _mapper.Map<CartDto>(dto);
 
-                    response.TotalItems = await _context.ShoppingCartDetails.Where(x => x.ShoppingCartId==id).CountAsync();
+                    response.UserId = id;
+
+                    response.TotalItems = await _context.ShoppingCartDetails
+                        .Where(x => x.ShoppingCartId == id)
+                        .SumAsync(x => x.Quantity);
+
+                    // Actualiza la cantidad total de productos que hay en el carrito
+                    cartEntity.TotalItems = response.TotalItems;
+
+                    _context.ShoppingCarts.Update(cartEntity);
+                    await _context.SaveChangesAsync();
+
+                    transaction.Commit();
 
                     return new ResponseDto<CartDto>
                     {
@@ -101,7 +167,7 @@ namespace CommercialManager.API.Services
                         Data = response
                     };
                 }
-                catch(SqliteException e)
+                catch (SqliteException e)
                 {
                     transaction.Rollback();
                     return new ResponseDto<CartDto>
@@ -113,6 +179,38 @@ namespace CommercialManager.API.Services
                 }
             }
         }
+        
+        //Crear Get de un carrito por el id
+
+        public async Task<ResponseDto<CartDto>> GetCartAsync(Guid id)
+        {
+            var cartEntity = await _context.ShoppingCarts.FirstOrDefaultAsync(x => x.UserId == id);
+
+            if (cartEntity is null)
+            {
+                return new ResponseDto<CartDto>
+                {
+                    StatusCode = HttpStatusCode.BAD_REQUEST,
+                    Status = false,
+                    Message = "Registro no encontrado"
+                };
+            }
+
+            var cartDetailsEntity = await _context.ShoppingCartDetails.Where(x => x.ShoppingCartId == id).ToListAsync();
+
+            var response = _mapper.Map<CartDto>(cartEntity);
+            response.Items = _mapper.Map<List<CartDetailDto>>(cartDetailsEntity);
+
+            return new ResponseDto<CartDto>
+            {
+                StatusCode = HttpStatusCode.OK,
+                Status = true,
+                Message = "Registros encontrados correctamente",
+                Data = response
+            };
+        }
+
+        //Eliminar productos de un Carrito
 
     }
 }

@@ -40,6 +40,14 @@ namespace CommercialManager.API.Helpers
             CreateMap<CartDetailDto, ShoppingCartDetailEntity>().ReverseMap();
             CreateMap<CartDto, CartCreateDto>().ReverseMap();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            CreateMap<ShoppingCartEntity, CartDto>().ReverseMap();
+            CreateMap<ShoppingCartDetailEntity, CartDetailDto>().ReverseMap();
+
+=======
+>>>>>>> ventas-dtos
             // Mappers of SalesService
 
             //Details Sales
@@ -53,6 +61,10 @@ namespace CommercialManager.API.Helpers
             //billing sales details
             CreateMap<SalesDetailEntity, InvoiceItemDto>();
             CreateMap<SalesEntity, SaleActionResponseDto>();
+<<<<<<< HEAD
+=======
+>>>>>>> c73bc2d (Creation of sales dtos)
+>>>>>>> ventas-dtos
 
             // Others Mappers profiles ...
         }

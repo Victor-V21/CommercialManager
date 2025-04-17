@@ -21,6 +21,9 @@ namespace CommercialManager.API.Database.Entities
         [Column("total_items")]
         public int TotalItems { get; set; }
 
+        [Column ("total_amount")]
+        public decimal TotalAmount { get; set; }
+
         // Llaves Foraneas
         [Required]
         [ForeignKey(nameof(UserId))]

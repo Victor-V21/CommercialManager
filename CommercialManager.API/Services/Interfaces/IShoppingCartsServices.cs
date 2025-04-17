@@ -6,5 +6,6 @@ namespace CommercialManager.API.Services.Interfaces
     public interface IShoppingCartsServices
     {
         Task<ResponseDto<CartDto>> AddItemToCartAsync(Guid id, CartCreateDto dto);
+        Task<ResponseDto<CartDto>> GetCartAsync(Guid id);
     }
 }

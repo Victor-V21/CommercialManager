@@ -16,7 +16,7 @@ namespace CommercialManager.API.Services
 
         private readonly CommercialDbContext _context;
         private readonly IMapper _mapper;
-        private readonly int PAGE_SIZE;
+        private readonly int PAGE_SIZE; 
         private readonly int PAGE_SIZE_LIMIT;
 
         public ShoppingCartsServices(CommercialDbContext context, IMapper mapper, IConfiguration configuration)

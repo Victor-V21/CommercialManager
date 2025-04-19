@@ -347,6 +347,32 @@
     ]
   },
   {
+    "ContainingType": "CommercialManager.API.Controllers.SalesControllers",
+    "Method": "ProcessSale",
+    "RelativePath": "api/sales/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[CommercialManager.API.Dtos.Sales.SaleActionResponseDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "CommercialManager.API.Controllers.UsersController",
     "Method": "PostUser",
     "RelativePath": "api/users",

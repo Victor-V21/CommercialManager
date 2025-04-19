@@ -70,7 +70,7 @@ namespace CommercialManager.API.Services
                 Total = (double)cart.Details.Sum(item => item.Quantity * item.Product.Price!.Value),
                 SalesDetail = cart.Details.Select(item => new SalesDetailEntity
                 {
-                    Id = Guid.NewGuid() , //Tengo un error en esta parte me devuelve ceros 
+                    Id = Guid.NewGuid() , 
                     ProductId = item.Product.Id,
                     Quantity = item.Quantity,
                     UnitPrice = (double)item.Product.Price!.Value 
@@ -92,11 +92,18 @@ namespace CommercialManager.API.Services
             var responseDto = _mapper.Map<SaleActionResponseDto>(sale);
             responseDto.Message = "Gracias por su compra, vuelva pronto!";
             responseDto.IsSuccess = true;
-            responseDto.Items = sale.SalesDetail.Select(detail => new SaleDetailDto
+
+
+            var detailsWithIds = await _context.SalesDetails
+                .Where(sd => sd.SalesId == sale.Id)
+                .ToListAsync();
+
+            responseDto.Items = detailsWithIds.Select(detail => new SaleDetailDto
             {
+                Id = detail.Id,  
                 ProductId = detail.ProductId,
                 Quantity = detail.Quantity,
-                UnitPrice = detail.UnitPrice 
+                UnitPrice = detail.UnitPrice
             }).ToList();
 
             return new ResponseDto<SaleActionResponseDto>
@@ -108,5 +115,78 @@ namespace CommercialManager.API.Services
             };
         }
 
+        // Endpoint Cancelar
+        public async Task<ResponseDto<SaleActionResponseDto>> CancelSaleAsync(Guid saleId)
+        {
+            var sale = await _context.Sales
+                .Include(s => s.SalesDetail)
+                .ThenInclude(sd => sd.Product)
+                .FirstOrDefaultAsync(s => s.Id == saleId);
+
+            if (sale == null)
+                return new ResponseDto<SaleActionResponseDto>
+                {
+                    StatusCode = HttpStatusCode.NOT_FOUND,
+                    Message = "La venta no ha sido encontrada",
+                    Status = false
+                };
+
+            //Aqui hace el aumento del los productos del stocks
+            using (var transaction = await _context.Database.BeginTransactionAsync())
+            {
+                try
+                {
+                    var listItems = new List<SaleDetailDto>();
+
+                    var saleDetails = await _context.SalesDetails
+                       .Where(sd => sd.SalesId == sale.Id)
+                       .Include(sd => sd.Product)
+                       .ToListAsync();
+
+                    foreach (var detail in saleDetails)
+                    {
+                        detail.Product.Stock += detail.Quantity;
+                        _context.Products.Update(detail.Product);
+
+                        listItems.Add(new SaleDetailDto
+                        {
+                            Id = detail.Id,
+                            ProductId = detail.ProductId,
+                            Quantity = detail.Quantity,
+                            UnitPrice = detail.UnitPrice,
+                            ProductName = detail.Product.Name 
+                        });
+                    }
+
+                    _context.SalesDetails.RemoveRange(sale.SalesDetail);
+                    _context.Sales.Remove(sale);
+
+                    await _context.SaveChangesAsync();
+                    await transaction.CommitAsync();
+
+                    return new ResponseDto<SaleActionResponseDto>
+                    {
+                        StatusCode = HttpStatusCode.OK,
+                        Message = "La venta a sido cancelada correctamente!",
+                        Status = true,
+                        Data = new SaleActionResponseDto
+                        {
+                            Id = sale.Id,
+                            UserId = sale.UserId,
+                            Date = sale.Date,
+                            Total = sale.Total,
+                            IsSuccess = true,
+                            Message = "Compra cancelada exitosamente y productos almacenados",
+                            Items = listItems 
+                        }
+                    };
+                }
+                catch
+                {
+                    await transaction.RollbackAsync();
+                    throw;
+                }
+            }
+        }
     }
 }

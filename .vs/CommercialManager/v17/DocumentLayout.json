@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\ferchita\\projects\\proyecto-final\\commercialmanager\\commercialmanager.api\\controllers\\salescontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\controllers\\salescontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\ferchita\\projects\\proyecto-final\\commercialmanager\\commercialmanager.api\\services\\salesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\salesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SalesControllers.cs",
+              "DocumentMoniker": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "ToolTip": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "RelativeToolTip": "CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T06:17:01.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalesServices.cs",
+              "DocumentMoniker": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Services\\SalesServices.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\SalesServices.cs",
+              "ToolTip": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\Services\\SalesServices.cs",
+              "RelativeToolTip": "CommercialManager.API\\Services\\SalesServices.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAgwJgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T06:14:39.333Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"

@@ -5,6 +5,7 @@ namespace CommercialManager.API.Services.Interfaces
 {
     public interface ISalesServices
     {
+        Task<ResponseDto<SaleActionResponseDto>> CancelSaleAsync(Guid saleId);
         Task<ResponseDto<SaleActionResponseDto>> ProcessSaleAsync(Guid userId);
     }
 }

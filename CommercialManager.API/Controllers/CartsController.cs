@@ -31,5 +31,15 @@ namespace CommercialManager.API.Controllers
             
             return StatusCode(response.StatusCode, response);
         }
+
+        // Remove items with quantity (default in negative, to rest)
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<ResponseDto<CartDto>>> PutItems(Guid id, [FromBody] CartEditDto dto)
+        {
+           var response = await _services.RemoveItemsToCartAsync(id, dto);
+
+            return StatusCode(response.StatusCode, response);
+        }
     }
 }

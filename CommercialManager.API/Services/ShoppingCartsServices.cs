@@ -58,8 +58,9 @@ namespace CommercialManager.API.Services
                         cartEntity = _mapper.Map<ShoppingCartEntity>(dto);
                         cartEntity.UserId = id;
 
+
                         _context.ShoppingCarts.Add(cartEntity);
-                        await _context.SaveChangesAsync();
+                        //await _context.SaveChangesAsync();
                     }
 
                     //Verifica que contenga Items para agregar
@@ -211,6 +212,106 @@ namespace CommercialManager.API.Services
         }
 
         //Eliminar productos de un Carrito
+
+        public async Task<ResponseDto<CartDto>> RemoveItemsToCartAsync(Guid id, CartEditDto dto)
+        {
+            var cartEntity = await _context.ShoppingCarts.FirstOrDefaultAsync(x => x.UserId == id);
+
+            if (cartEntity is null)
+            {
+                return new ResponseDto<CartDto>
+                {
+                    StatusCode = HttpStatusCode.BAD_REQUEST,
+                    Status = false,
+                    Message = "Registro no encontrado"
+                };
+            }
+
+            var productsInCart = await _context.ShoppingCartDetails
+                .Where(x => x.ShoppingCartId == id).ToListAsync();
+
+            var idsProdcuts = productsInCart.Select(x => x.ProductId).ToList();
+
+            var itemsToRemove = new List<ShoppingCartDetailEntity>();
+            var itemsToUpdate = new List<ShoppingCartDetailEntity>();
+
+            foreach (var item in dto.Items)
+            {
+                if (idsProdcuts.Contains(item.ProductId))
+                {
+                    var detailExisting = productsInCart.FirstOrDefault(x => x.ProductId == item.ProductId);
+
+                    if (detailExisting == null) continue;
+
+                    var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == item.ProductId);
+
+                    if (item.Quantity <= detailExisting.Quantity)
+                    {
+                        detailExisting.Quantity -= item.Quantity;
+                    }
+                    else
+                    {
+                        return new ResponseDto<CartDto>
+                        {
+                            StatusCode = HttpStatusCode.BAD_REQUEST,
+                            Status = false,
+                            Message = $"En productId: {item.ProductId}, solo hay {detailExisting.Quantity} cantidades"
+                        };
+                    }
+
+                    if (detailExisting.Quantity == 0)
+                    {
+                        itemsToRemove.Add(detailExisting);
+                    }
+                    else
+                    {
+                        var price = product.Price;
+                        var discount = product.Discount;
+                        var subtotal = (price - discount * price) * detailExisting.Quantity;
+
+                        detailExisting.Subtotal = (decimal)subtotal;
+                        itemsToUpdate.Add(detailExisting);
+                    }
+                }
+            }
+
+            // Aplicar cambios
+            if (itemsToRemove.Any())
+                _context.ShoppingCartDetails.RemoveRange(itemsToRemove);
+
+            if (itemsToUpdate.Any())
+                _context.ShoppingCartDetails.UpdateRange(itemsToUpdate);
+
+            // Recalcular totales sobre SOLO los que quedan
+            var remainingProducts = productsInCart.Except(itemsToRemove).ToList();
+
+            var totalCartAmount = remainingProducts.Sum(x => x.Subtotal);
+            var totalItems = remainingProducts.Sum(x => x.Quantity);
+
+            cartEntity.TotalAmount = totalCartAmount;
+            cartEntity.TotalItems = totalItems;
+
+            _context.ShoppingCarts.Update(cartEntity);
+
+            await _context.SaveChangesAsync();
+
+            var response = new CartDto
+            {
+                UserId = id,
+                CreateDate = dto.CreateDate,
+                TotalAmount = totalCartAmount,
+                TotalItems = totalItems,
+                Items = _mapper.Map<List<CartDetailDto>>(remainingProducts)
+            };
+
+            return new ResponseDto<CartDto>
+            {
+                StatusCode = HttpStatusCode.OK,
+                Status = true,
+                Message = "Registros Editados Correctamente",
+                Data = response
+            };
+        }
 
     }
 }

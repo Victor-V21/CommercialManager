@@ -1,0 +1,27 @@
+meta {
+  name: Remove Items
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PATH}}/carts/a3d0dd22-50a5-46dc-96c0-0948d0f87d14
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "createDate": "2025-04-16T06:42:59.466Z",
+    "items": [
+      {
+        "quantity": 1,
+        "productId": "c7822d0e-42e7-4bee-8331-f9c0e28504c5"
+      },
+      {
+        "quantity": 1,
+        "productId": "23af7491-2729-47a3-800c-8b181c157c8f"
+      }
+    ]
+  }
+}

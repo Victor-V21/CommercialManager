@@ -57,6 +57,37 @@
     ]
   },
   {
+    "ContainingType": "CommercialManager.API.Controllers.CartsController",
+    "Method": "PutItems",
+    "RelativePath": "api/carts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CommercialManager.API.Dtos.CartsShoppings.CartEditDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[CommercialManager.API.Dtos.CartsShoppings.CartDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "CommercialManager.API.Controllers.CategoriesController",
     "Method": "PostCategory",
     "RelativePath": "api/categories",

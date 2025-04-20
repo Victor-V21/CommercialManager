@@ -20,7 +20,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[CommercialManager.API.Dtos.CartsShoppings.CartDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[CommercialManager.API.Dtos.CartsShoppings.CartActionResponseDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

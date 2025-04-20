@@ -43,6 +43,8 @@ namespace CommercialManager.API.Helpers
             CreateMap<ShoppingCartEntity, CartDto>().ReverseMap();
             CreateMap<ShoppingCartDetailEntity, CartDetailDto>().ReverseMap();
 
+            CreateMap<CartActionResponseDto, CartCreateDto>().ReverseMap();
+
             // Mappers of SalesService
 
             //Details Sales

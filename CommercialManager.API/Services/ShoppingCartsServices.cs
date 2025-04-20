@@ -27,7 +27,6 @@ namespace CommercialManager.API.Services
             PAGE_SIZE_LIMIT = configuration.GetValue<int>("PageSizeLimit");
         }
 
-
         // Add items to a new cart or an existent cart, whit user´s id
         public async Task<ResponseDto<CartDto>> AddItemToCartAsync(Guid id, CartCreateDto dto)
         {
@@ -57,7 +56,6 @@ namespace CommercialManager.API.Services
                         //Se añade el cart en memoria
                         cartEntity = _mapper.Map<ShoppingCartEntity>(dto);
                         cartEntity.UserId = id;
-
 
                         _context.ShoppingCarts.Add(cartEntity);
                         //await _context.SaveChangesAsync();
@@ -96,7 +94,6 @@ namespace CommercialManager.API.Services
                         };
                     }
 
-
                     // Si existe el producto en cart le suma la cantidad, si no, crea un registro
                     foreach (var item in dto.Items)
                     {
@@ -127,7 +124,9 @@ namespace CommercialManager.API.Services
                                 ProductId = item.ProductId,
                                 Quantity = quantity,
                                 ShoppingCartId = cartEntity.UserId,
-                                Subtotal = (decimal)subtotal
+                                Subtotal = (decimal)subtotal,
+                                ProductName = product.Name,
+                                Price = (decimal)price
                             };
                             _context.ShoppingCartDetails.Add(newDetail);
                         }
@@ -151,6 +150,8 @@ namespace CommercialManager.API.Services
                     response.TotalItems = await _context.ShoppingCartDetails
                         .Where(x => x.ShoppingCartId == id)
                         .SumAsync(x => x.Quantity);
+
+                    response.TotalAmount = totalCartAmount;
 
                     // Actualiza la cantidad total de productos que hay en el carrito
                     cartEntity.TotalItems = response.TotalItems;

@@ -16,7 +16,7 @@ namespace CommercialManager.API.Controllers
         }
 
         [HttpPost("{id}")]
-        public async Task<ActionResult<ResponseDto<CartDto>>> AddItems(Guid id, [FromBody]CartCreateDto dto)
+        public async Task<ActionResult<ResponseDto<CartActionResponseDto>>> AddItems(Guid id, [FromBody]CartCreateDto dto)
         {
             var response = await _services.AddItemToCartAsync(id,dto);
 

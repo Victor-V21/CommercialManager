@@ -15,12 +15,17 @@ namespace CommercialManager.API.Database.Entities
         [Required]
         [Column("cart_id")]
         public Guid ShoppingCartId { get; set; }
-
+        [Required]
+        [Column ("price")]
+        public decimal Price { get; set; }
         [Column("quantity")]
         public int Quantity { get; set; }
 
         [Column("subtotal")]
         public decimal Subtotal { get; set; }
+
+        [Column("product_name")]
+        public string ProductName { get; set; }
 
         [Column("product_id")]
         public Guid ProductId { get; set; }

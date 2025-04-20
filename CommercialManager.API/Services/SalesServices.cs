@@ -52,7 +52,7 @@ namespace CommercialManager.API.Services
                         Status = false
                     };
 
-                if (item.Product.Price == null)
+                if (item.Product.Price == null) //Valida por si el precio del producto es null
                     return new ResponseDto<SaleActionResponseDto>
                     {
                         StatusCode = HttpStatusCode.BAD_REQUEST,
@@ -67,13 +67,16 @@ namespace CommercialManager.API.Services
                 Id = Guid.NewGuid(),
                 UserId = userId,
                 Date = DateTime.UtcNow,
-                Total = (double)cart.Details.Sum(item => item.Quantity * item.Product.Price!.Value),
+                Total = (double)
+                    cart.Details.Sum(item => item.Subtotal),
                 SalesDetail = cart.Details.Select(item => new SalesDetailEntity
                 {
-                    Id = Guid.NewGuid() , 
+                    Id = Guid.NewGuid(),
                     ProductId = item.Product.Id,
                     Quantity = item.Quantity,
-                    UnitPrice = (double)item.Product.Price!.Value 
+                    ProductName = item.Product.Name,
+                    // ------Falta ProductName------
+                    UnitPrice = (double)item.Product.Price.Value 
                 }).ToList()
             };
 
@@ -83,16 +86,16 @@ namespace CommercialManager.API.Services
                 item.Product.Stock -= item.Quantity;
                 _context.Products.Update(item.Product);
             }
-            _context.ShoppingCartDetails.RemoveRange(cart.Details);
 
-           
-            await _context.Sales.AddAsync(sale);
+            _context.ShoppingCartDetails.RemoveRange(cart.Details);
+             _context.Sales.Add(sale);
+            _context.ShoppingCarts.Remove(cart);
+
             await _context.SaveChangesAsync();
 
             var responseDto = _mapper.Map<SaleActionResponseDto>(sale);
             responseDto.Message = "Gracias por su compra, vuelva pronto!";
             responseDto.IsSuccess = true;
-
 
             var detailsWithIds = await _context.SalesDetails
                 .Where(sd => sd.SalesId == sale.Id)
@@ -103,6 +106,7 @@ namespace CommercialManager.API.Services
                 Id = detail.Id,  
                 ProductId = detail.ProductId,
                 Quantity = detail.Quantity,
+                ProductName = detail.Product.Name,
                 UnitPrice = detail.UnitPrice
             }).ToList();
 
@@ -184,7 +188,13 @@ namespace CommercialManager.API.Services
                 catch
                 {
                     await transaction.RollbackAsync();
-                    throw;
+                    //throw;
+                    return new ResponseDto<SaleActionResponseDto>
+                    {
+                        StatusCode = HttpStatusCode.INTERNAL_SERVER_ERROR,
+                        Message = "Error interno del servidor",
+                        Status = false
+                    };
                 }
             }
         }

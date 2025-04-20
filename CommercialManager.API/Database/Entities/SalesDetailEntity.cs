@@ -19,6 +19,11 @@ namespace CommercialManager.API.Database.Entities
         [Column("product_id")]
         public Guid ProductId { get; set; }
 
+        // Columna añadida
+        [Required]
+        [Column("product_name")]
+        public string ProductName { get; set; }
+
         [Required]
         [Column("quantity")]
         public int Quantity { get; set; }

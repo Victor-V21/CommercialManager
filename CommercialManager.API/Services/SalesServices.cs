@@ -5,6 +5,7 @@ using CommercialManager.API.Database.Entities;
 using CommercialManager.API.Dtos.Common;
 using CommercialManager.API.Dtos.Sales;
 using CommercialManager.API.Dtos.Sales.Details;
+using CommercialManager.API.Dtos.Sales.Invoice;
 using CommercialManager.API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -73,9 +74,10 @@ namespace CommercialManager.API.Services
                 {
                     Id = Guid.NewGuid(),
                     ProductId = item.Product.Id,
-                    Quantity = item.Quantity,
-                    ProductName = item.Product.Name,
                     // ------Falta ProductName------
+                    ProductName = item.Product.Name,
+                    Quantity = item.Quantity,
+                    Discount = item.Product.Discount,
                     UnitPrice = (double)item.Product.Price.Value 
                 }).ToList()
             };
@@ -107,6 +109,7 @@ namespace CommercialManager.API.Services
                 ProductId = detail.ProductId,
                 Quantity = detail.Quantity,
                 ProductName = detail.Product.Name,
+                Discount = detail.Product.Discount,
                 UnitPrice = detail.UnitPrice
             }).ToList();
 
@@ -156,9 +159,11 @@ namespace CommercialManager.API.Services
                         {
                             Id = detail.Id,
                             ProductId = detail.ProductId,
+                            ProductName = detail.Product.Name,
                             Quantity = detail.Quantity,
+                            Discount = detail.Discount,
                             UnitPrice = detail.UnitPrice,
-                            ProductName = detail.Product.Name 
+                            
                         });
                     }
 
@@ -197,6 +202,58 @@ namespace CommercialManager.API.Services
                     };
                 }
             }
+        }
+
+        //Facturacion
+        public async Task<ResponseDto<InvoiceDto>> GenerateInvoiceAsync(Guid saleId)
+        {
+            // Aqui vamos a obtener lo que son los datos del usuario, el producto y los detallas de la venta 
+            var sale = await _context.Sales
+                .Include(s => s.SalesDetail)
+                    .ThenInclude(sd => sd.Product)
+                .Include(s => s.User)
+                .FirstOrDefaultAsync(s => s.Id == saleId);
+
+            if (sale == null)
+                return new ResponseDto<InvoiceDto>
+                {
+                    StatusCode = HttpStatusCode.NOT_FOUND,
+                    Message = "La venta no ha sido encontrada!",
+                    Status = false
+                };
+
+            //Aqui hacemos el mapeo de los detalles de la compra 
+            var invoiceItems = sale.SalesDetail.Select(detail => new InvoiceItemDto
+            {
+                ProductId = detail.ProductId,
+                ProductName = detail.Product.Name,
+                Quantity = detail.Quantity,
+                UnitPrice = (double)detail.UnitPrice,
+                Discount = (decimal)detail.Discount,
+                Subtotal = (decimal)(detail.Quantity * detail.UnitPrice),
+                Total = Math.Round(((decimal)detail.UnitPrice - (decimal)(detail.Product.Discount ?? 0)) * detail.Quantity, 2)
+            }).ToList();
+
+            //Aqui hacemos el ingreso de los datos del cliente, el del producto y por ultimo el total a pagar
+            var invoice = new InvoiceDto
+            {
+                SaleId = sale.Id,
+                Date = sale.Date,
+                ClientName = $"{sale.User.FirstName} {sale.User.LastName}", //unimos el nombre y apellido 
+                ClientDNI = sale.User.DNI,
+                Items = invoiceItems,
+                TotalToPay = invoiceItems.Sum(item => item.Total)
+            };
+
+
+
+            return new ResponseDto<InvoiceDto>
+            {
+                StatusCode = HttpStatusCode.OK,
+                Message = "Facturacion, Gracias por si compra!",
+                Status = true,
+                Data = invoice
+            };
         }
     }
 }

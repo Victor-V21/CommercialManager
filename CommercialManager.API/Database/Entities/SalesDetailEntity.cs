@@ -31,6 +31,10 @@ namespace CommercialManager.API.Database.Entities
         [Required]
         [Column("unit_price")]
         public double UnitPrice { get; set; }
+        //Agregamos la columna descuento 
+
+        [Column("discount")]
+        public decimal? Discount { get; set; }
 
         [ForeignKey(nameof(SalesId))]
         public virtual SalesEntity Sales { get; set; }

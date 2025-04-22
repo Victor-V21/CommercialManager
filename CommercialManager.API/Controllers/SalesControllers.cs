@@ -1,6 +1,7 @@
 ﻿using CommercialManager.API.Constants;
 using CommercialManager.API.Dtos.Common;
 using CommercialManager.API.Dtos.Sales;
+using CommercialManager.API.Dtos.Sales.Invoice;
 using CommercialManager.API.Services;
 using CommercialManager.API.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +44,14 @@ namespace CommercialManager.API.Controllers
                     Status = false
                 });
             }
+        }
+
+        //Facturacion
+        [HttpGet("{saleId}")]
+        public async Task<ActionResult<ResponseDto<InvoiceDto>>> GetInvoice(Guid saleId)
+        {
+            var result = await _services.GenerateInvoiceAsync(saleId);
+            return StatusCode(result.StatusCode, result);
         }
 
     }

@@ -2,10 +2,12 @@
 {
     public class InvoiceDto
     {
-        public Guid Id { get; set; }
-        public Guid UserId { get; set; }
+        public Guid SaleId { get; set; }
         public DateTime Date { get; set; }
-        public double Total { get; set; }
-        public List<InvoiceItemDto> Items { get; set; }
+        public string ClientName { get; set; } 
+        public string ClientDNI { get; set; }
+        public List<InvoiceItemDto> Items { get; set; } = new();
+
+        public decimal TotalToPay { get; set; }
     }
 }

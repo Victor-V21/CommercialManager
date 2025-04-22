@@ -14,7 +14,7 @@ namespace CommercialManager.API.Database.Entities
         [Column("user_id")]
         public Guid UserId { get; set; }
 
-        [Column("date")]
+        [Column("date")] 
         public DateTime Date { get; set; }
 
         [Column("total")]

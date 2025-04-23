@@ -74,7 +74,6 @@ namespace CommercialManager.API.Services
                 {
                     Id = Guid.NewGuid(),
                     ProductId = item.Product.Id,
-                    // ------Falta ProductName------
                     ProductName = item.Product.Name,
                     Quantity = item.Quantity,
                     Discount = item.Product.Discount,

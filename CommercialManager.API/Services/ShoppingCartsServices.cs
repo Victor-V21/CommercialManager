@@ -28,7 +28,7 @@ namespace CommercialManager.API.Services
         }
 
         // Add items to a new cart or an existent cart, whit user´s id
-        public async Task<ResponseDto<CartDto>> AddItemToCartAsync(Guid id, CartCreateDto dto)
+        public async Task<ResponseDto<CartActionResponseDto>> AddItemToCartAsync(Guid id, CartCreateDto dto)
         {
             using (var transaction = await _context.Database.BeginTransactionAsync())
             {
@@ -45,7 +45,7 @@ namespace CommercialManager.API.Services
                         // Verifica si existe el usuario el cual quiere añadirle el cart
                         if (userEntity is null)
                         {
-                            return new ResponseDto<CartDto>
+                            return new ResponseDto<CartActionResponseDto>
                             {
                                 StatusCode = HttpStatusCode.BAD_REQUEST,
                                 Status = false,
@@ -64,7 +64,7 @@ namespace CommercialManager.API.Services
                     //Verifica que contenga Items para agregar
                     if (dto.Items is null)
                     {
-                        return new ResponseDto<CartDto>
+                        return new ResponseDto<CartActionResponseDto>
                         {
                             StatusCode = HttpStatusCode.BAD_REQUEST,
                             Status = false,
@@ -86,7 +86,7 @@ namespace CommercialManager.API.Services
                     // Si hay productos invalidos en la lista, se enviaran
                     if (invalidProducts.Any())
                     {
-                        return new ResponseDto<CartDto>
+                        return new ResponseDto<CartActionResponseDto>
                         {
                             StatusCode = HttpStatusCode.BAD_REQUEST,
                             Status = false,
@@ -143,7 +143,7 @@ namespace CommercialManager.API.Services
                     cartEntity.TotalAmount = totalCartAmount;
 
                     //Generando response para retornar los valores
-                    var response = _mapper.Map<CartDto>(dto);
+                    var response = _mapper.Map<CartActionResponseDto>(dto);
 
                     response.UserId = id;
 
@@ -161,7 +161,7 @@ namespace CommercialManager.API.Services
 
                     transaction.Commit();
 
-                    return new ResponseDto<CartDto>
+                    return new ResponseDto<CartActionResponseDto>
                     {
                         StatusCode = HttpStatusCode.CREATED,
                         Status = true,
@@ -172,7 +172,7 @@ namespace CommercialManager.API.Services
                 catch (SqliteException e)
                 {
                     transaction.Rollback();
-                    return new ResponseDto<CartDto>
+                    return new ResponseDto<CartActionResponseDto>
                     {
                         StatusCode = HttpStatusCode.INTERNAL_SERVER_ERROR,
                         Status = false,
@@ -314,5 +314,37 @@ namespace CommercialManager.API.Services
             };
         }
 
+        public async Task<ResponseDto<CartActionResponseDto>> DeleteCart(Guid id)
+        {
+            var cartEntity = await _context.ShoppingCarts
+                .Include(c => c.Details) // Incluye los detalles del carrito
+                .FirstOrDefaultAsync(x => x.UserId == id);
+
+            if (cartEntity == null)
+            {
+                return new ResponseDto<CartActionResponseDto>
+                {
+                    StatusCode = HttpStatusCode.NOT_FOUND,
+                    Status = false,
+                    Message = "Carrito no encontrado"
+                };
+            }
+
+            _context.ShoppingCartDetails.RemoveRange(cartEntity.Details); // Elimina los detalles primero
+            _context.ShoppingCarts.Remove(cartEntity);                // Luego elimina el carrito
+
+            await _context.SaveChangesAsync();
+
+            return new ResponseDto<CartActionResponseDto>
+            {
+                StatusCode = HttpStatusCode.OK,
+                Status = true,
+                Message = "Carrito eliminado exitosamente",
+                Data = new CartActionResponseDto
+                {
+                    UserId = id
+                }
+            };
+        }
     }
 }

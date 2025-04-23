@@ -77,7 +77,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[CommercialManager.API.Dtos.CartsShoppings.CartDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[CommercialManager.API.Dtos.CartsShoppings.CartActionResponseDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CommercialManager.API.Controllers.CartsController",
+    "Method": "DeleteCartById",
+    "RelativePath": "api/carts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[CommercialManager.API.Dtos.CartsShoppings.CartActionResponseDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

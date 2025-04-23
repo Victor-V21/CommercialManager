@@ -314,6 +314,7 @@ namespace CommercialManager.API.Services
             };
         }
 
+        // Eliminar el carrito
         public async Task<ResponseDto<CartActionResponseDto>> DeleteCart(Guid id)
         {
             var cartEntity = await _context.ShoppingCarts

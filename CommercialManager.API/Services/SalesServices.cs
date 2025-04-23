@@ -17,12 +17,15 @@ namespace CommercialManager.API.Services
 
         private readonly CommercialDbContext _context;
         private readonly IMapper _mapper;
+        private readonly int PAGE_SIZE;
+        private readonly int PAGE_SIZE_LIMIT;
 
-        public SalesServices(CommercialDbContext context, IMapper mapper )
+        public SalesServices(CommercialDbContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
-
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
+            PAGE_SIZE_LIMIT = configuration.GetValue<int>("PageSizeLimit");
         }
         // Endpoint para realizar una compra, todos los datos del carrito se pasan a
         // la tabla de ventas (con sus details), y se debe eliminar el stock
@@ -203,7 +206,7 @@ namespace CommercialManager.API.Services
             }
         }
 
-        //Facturacion
+        //Endpoint Facturacion
         public async Task<ResponseDto<InvoiceDto>> GenerateInvoiceAsync(Guid saleId)
         {
             // Aqui vamos a obtener lo que son los datos del usuario, el producto y los detallas de la venta 
@@ -252,5 +255,74 @@ namespace CommercialManager.API.Services
                 Data = invoice
             };
         }
+
+        // Endpoint Obtener las facturas de un usuario
+        public async Task<ResponseDto<PaginationDto<List<InvoiceDto>>>> GetSalesByUserIdAsync(
+            Guid userId, int page = 1, int pageSize = 0)
+        {
+            pageSize = pageSize == 0 ? PAGE_SIZE : pageSize;
+            int startIndex = (page - 1) * pageSize;
+
+            var salesList = await _context.Sales
+                .Where(x => x.UserId == userId)
+                .Include(s => s.SalesDetail).ThenInclude(sd => sd.Product)
+                .Include(s => s.User)
+                .ToListAsync();
+
+            if (salesList == null || salesList.Count == 0)
+            {
+                return new ResponseDto<PaginationDto<List<InvoiceDto>>>
+                {
+                    StatusCode = HttpStatusCode.NOT_FOUND,
+                    Status = false,
+                    Message = "Este usuario no ha registrado compras",
+                };
+            }
+
+            // Paginación de ventas
+            var paginatedSales = salesList.Skip(startIndex).Take(pageSize).ToList();
+
+            // Creamos las facturas (una por cada venta)
+            var invoiceList = paginatedSales.Select(sale => new InvoiceDto
+            {
+                SaleId = sale.Id,
+                Date = sale.Date,
+                ClientName = $"{sale.User.FirstName} {sale.User.LastName}",
+                ClientDNI = sale.User.DNI,
+                Items = sale.SalesDetail.Select(detail => new InvoiceItemDto
+                {
+                    ProductId = detail.ProductId,
+                    ProductName = detail.Product.Name,
+                    Quantity = detail.Quantity,
+                    UnitPrice = detail.UnitPrice,
+                    Discount = (decimal)detail.Discount,
+                    Subtotal = (decimal)(detail.Quantity * detail.UnitPrice),
+                    Total = (decimal)(detail.UnitPrice - (detail.Discount * detail.UnitPrice)) * detail.Quantity
+                }).ToList(),
+                TotalAmount = sale.SalesDetail.Sum(detail =>
+                    (decimal)(detail.UnitPrice - (detail.Discount * detail.UnitPrice)) * detail.Quantity)
+            }).ToList();
+
+            var totalRows = salesList.Count;
+
+            return new ResponseDto<PaginationDto<List<InvoiceDto>>>
+            {
+                StatusCode = HttpStatusCode.OK,
+                Status = true,
+                Message = "Registros encontrados correctamente",
+                Data = new PaginationDto<List<InvoiceDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = pageSize,
+                    TotalItems = totalRows,
+                    TotalPages = (int)Math.Ceiling((double)totalRows / pageSize),
+                    HasPreviousPage = page > 1,
+                    HasNextPage = startIndex + pageSize < PAGE_SIZE_LIMIT &&
+                                  page < (int)Math.Ceiling((double)totalRows / pageSize),
+                    Items = invoiceList
+                }
+            };
+        }
+
     }
 }

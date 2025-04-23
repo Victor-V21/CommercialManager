@@ -482,6 +482,42 @@
     ]
   },
   {
+    "ContainingType": "CommercialManager.API.Controllers.SalesControllers",
+    "Method": "GetInvoicesByUserId",
+    "RelativePath": "api/sales/user-purchases/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommercialManager.API.Dtos.Common.ResponseDto\u00601[[System.Collections.Generic.List\u00601[[CommercialManager.API.Dtos.Sales.Invoice.InvoiceDto, CommercialManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "CommercialManager.API.Controllers.UsersController",
     "Method": "PostUser",
     "RelativePath": "api/users",

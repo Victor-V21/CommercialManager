@@ -54,5 +54,15 @@ namespace CommercialManager.API.Controllers
             return StatusCode(result.StatusCode, result);
         }
 
+
+        // Facturas de un usuario
+        [HttpGet("user-purchases/{userId}")]
+        public async Task<ActionResult<ResponseDto<List<InvoiceDto>>>> GetInvoicesByUserId(
+            Guid userId, int page = 1, int pageSize = 0)
+        {
+            var result = await _services.GetSalesByUserIdAsync(userId, page, pageSize);
+
+            return StatusCode(result.StatusCode, result);
+        }
     }
 }

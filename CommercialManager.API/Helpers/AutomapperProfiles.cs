@@ -54,7 +54,7 @@ namespace CommercialManager.API.Helpers
             //Sales 
             CreateMap<SalesEntity, SalesDto>().ReverseMap();
             CreateMap<SaleCreateDto, SalesEntity>();
-            CreateMap<SalesEntity, InvoiceDto>();
+            CreateMap<SalesEntity, InvoiceDto>().ReverseMap();
 
             //billing sales details
             CreateMap<SalesDetailEntity, InvoiceItemDto>();

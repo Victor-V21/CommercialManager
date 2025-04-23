@@ -1,0 +1,15 @@
+meta {
+  name: User-purchases
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{PATH}}/sales/user-purchases/2E3580DE-F7C6-4733-A542-F973FDE551CA?pageSize=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pageSize: 1
+}

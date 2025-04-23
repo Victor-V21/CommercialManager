@@ -8,6 +8,7 @@ namespace CommercialManager.API.Services.Interfaces
     {
         Task<ResponseDto<SaleActionResponseDto>> CancelSaleAsync(Guid saleId);
         Task<ResponseDto<InvoiceDto>> GenerateInvoiceAsync(Guid saleId);
+        Task<ResponseDto<PaginationDto<List<InvoiceDto>>>> GetSalesByUserIdAsync(Guid userId, int page = 1, int pageSize = 0);
         Task<ResponseDto<SaleActionResponseDto>> ProcessSaleAsync(Guid userId);
     }
 }

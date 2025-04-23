@@ -151,5 +151,6 @@ namespace CommercialManager.API.Services
                 Data = _mapper.Map<UsersActionResponseDto>(userEntity)
             };
         }
+
     }
 }

@@ -6,8 +6,8 @@
         public DateTime Date { get; set; }
         public string ClientName { get; set; } 
         public string ClientDNI { get; set; }
+        public decimal TotalAmount { get; set; }
         public List<InvoiceItemDto> Items { get; set; } = new();
 
-        public decimal TotalToPay { get; set; }
     }
 }

@@ -78,7 +78,7 @@ namespace CommercialManager.API.Services
                     ProductName = item.Product.Name,
                     Quantity = item.Quantity,
                     Discount = item.Product.Discount,
-                    UnitPrice = (double)item.Product.Price.Value 
+                    UnitPrice = item.Product.Price.Value 
                 }).ToList()
             };
 
@@ -228,10 +228,10 @@ namespace CommercialManager.API.Services
                 ProductId = detail.ProductId,
                 ProductName = detail.Product.Name,
                 Quantity = detail.Quantity,
-                UnitPrice = (double)detail.UnitPrice,
+                UnitPrice = detail.UnitPrice,
                 Discount = (decimal)detail.Discount,
                 Subtotal = (decimal)(detail.Quantity * detail.UnitPrice),
-                Total = Math.Round(((decimal)detail.UnitPrice - (decimal)(detail.Product.Discount ?? 0)) * detail.Quantity, 2)
+                Total = (decimal)(detail.UnitPrice - (detail.Discount * detail.UnitPrice)) * detail.Quantity
             }).ToList();
 
             //Aqui hacemos el ingreso de los datos del cliente, el del producto y por ultimo el total a pagar
@@ -241,11 +241,9 @@ namespace CommercialManager.API.Services
                 Date = sale.Date,
                 ClientName = $"{sale.User.FirstName} {sale.User.LastName}", //unimos el nombre y apellido 
                 ClientDNI = sale.User.DNI,
+                TotalAmount = invoiceItems.Sum(item => item.Total),
                 Items = invoiceItems,
-                TotalToPay = invoiceItems.Sum(item => item.Total)
             };
-
-
 
             return new ResponseDto<InvoiceDto>
             {

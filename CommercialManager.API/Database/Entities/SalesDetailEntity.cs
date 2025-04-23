@@ -30,7 +30,7 @@ namespace CommercialManager.API.Database.Entities
 
         [Required]
         [Column("unit_price")]
-        public double UnitPrice { get; set; }
+        public decimal UnitPrice { get; set; }
         //Agregamos la columna descuento 
 
         [Column("discount")]

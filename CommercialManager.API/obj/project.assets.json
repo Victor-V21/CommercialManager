@@ -3241,23 +3241,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FERCHITA\\.nuget\\packages\\": {},
+    "C:\\Users\\Victor\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
+      "projectUniqueName": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
       "projectName": "CommercialManager.API",
-      "projectPath": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
-      "packagesPath": "C:\\Users\\FERCHITA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FERCHITA\\projects\\proyecto-final\\CommercialManager\\CommercialManager.API\\obj\\",
+      "projectPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\CommercialManager.API.csproj",
+      "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\FERCHITA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Victor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

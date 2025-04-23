@@ -1,8 +1,11 @@
-﻿namespace CommercialManager.API.Dtos.Users
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CommercialManager.API.Dtos.Users
 {
     public class UsersDto
     {
         public Guid Id { get; set; }
+
         public string DNI { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

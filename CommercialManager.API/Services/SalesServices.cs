@@ -250,7 +250,7 @@ namespace CommercialManager.API.Services
             return new ResponseDto<InvoiceDto>
             {
                 StatusCode = HttpStatusCode.OK,
-                Message = "Facturacion, Gracias por si compra!",
+                Message = "Facturacion, Gracias por su compra!",
                 Status = true,
                 Data = invoice
             };

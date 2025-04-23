@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{PATH}}/users?page=1&pageSize=12
+  url: {{PATH}}/users?page=1&pageSize=2&searchTerm=V
   body: none
   auth: inherit
 }
 
 params:query {
   page: 1
-  pageSize: 12
-  ~searchTerm: perez
+  pageSize: 2
+  searchTerm: V
 }

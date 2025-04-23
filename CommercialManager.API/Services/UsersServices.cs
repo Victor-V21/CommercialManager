@@ -25,7 +25,6 @@ namespace CommercialManager.API.Services
             PAGE_SIZE_LIMIT = configuration.GetValue<int>("PageSizeLimit");
         }
 
-        
         // Create user
         public async Task<ResponseDto<UsersDto>> CreateAsync(UsersCreateDto dto)
         {
@@ -73,7 +72,6 @@ namespace CommercialManager.API.Services
 
             var userEntity = await userQuery
                 .OrderBy(x => x.DNI).Skip(startIndex).Take(pageSize).ToListAsync();
-
 
             return new ResponseDto<PaginationDto<List<UsersDto>>>
             {

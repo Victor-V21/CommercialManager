@@ -3,44 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\controllers\\salescontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\controllers\\salescontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\dtos\\users\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\users\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\services\\salesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\salesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\helpers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\dtos\\products\\productscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\products\\productscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\services\\shoppingcartsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\shoppingcartsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\controllers\\salescontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\controllers\\salescontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\dtos\\cartsshoppings\\cartcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\cartsshoppings\\cartcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\dtos\\cartsshoppings\\carteditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\cartsshoppings\\carteditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\dtos\\cartsshoppings\\cartactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\cartsshoppings\\cartactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\dtos\\cartsshoppings\\details\\cartdetailactionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\dtos\\cartsshoppings\\details\\cartdetailactionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|c:\\users\\victor\\projects\\proyecto\\commercialmanager\\commercialmanager.api\\services\\categoriesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D011F22-2F99-4CC1-8FC4-2FBFE7ECDDFF}|CommercialManager.API\\CommercialManager.API.csproj|solutionrelative:commercialmanager.api\\services\\categoriesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,131 +51,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SalesControllers.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\SalesControllers.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Controllers\\SalesControllers.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\SalesControllers.cs",
-              "RelativeToolTip": "CommercialManager.API\\Controllers\\SalesControllers.cs",
-              "ViewState": "AgIAABYAAAAAMzMzMzMywDEAAAAdAAAAAAAAAA==",
+              "Title": "UsersDto.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\Users\\UsersDto.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\Users\\UsersDto.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\Users\\UsersDto.cs*",
+              "RelativeToolTip": "CommercialManager.API\\Dtos\\Users\\UsersDto.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T17:23:05.812Z",
+              "WhenOpened": "2025-04-23T21:58:30.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SalesServices.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\SalesServices.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\SalesServices.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\SalesServices.cs",
-              "RelativeToolTip": "CommercialManager.API\\Services\\SalesServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANkAAAAAAAAAAAAAAA==",
+              "Title": "ProductsCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
+              "RelativeToolTip": "CommercialManager.API\\Dtos\\Products\\ProductsCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T17:10:30.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersServices.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\UsersServices.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\UsersServices.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\UsersServices.cs",
-              "RelativeToolTip": "CommercialManager.API\\Services\\UsersServices.cs",
-              "ViewState": "AgIAAD8AAAAAaGZmZmYiwEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T17:05:16.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AutomapperProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
-              "RelativeToolTip": "CommercialManager.API\\Helpers\\AutomapperProfiles.cs",
-              "ViewState": "AgIAAAoAAADAMjMzMzMLwAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:38:14.423Z",
+              "WhenOpened": "2025-04-23T21:34:25.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CartsController.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\CartsController.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Controllers\\CartsController.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\CartsController.cs",
-              "RelativeToolTip": "CommercialManager.API\\Controllers\\CartsController.cs",
-              "ViewState": "AgIAABoAAAAA//////8TwBwAAABSAAAAAAAAAA==",
+              "Title": "CategoriesServices.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\CategoriesServices.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\CategoriesServices.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\CategoriesServices.cs",
+              "RelativeToolTip": "CommercialManager.API\\Services\\CategoriesServices.cs",
+              "ViewState": "AgIAAC8AAAAA0MzMzMz8v3UAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:57:05.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CartEditDto.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\CartEditDto.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\CartsShoppings\\CartEditDto.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\CartEditDto.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\CartsShoppings\\CartEditDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:42:41.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CartActionResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\CartActionResponseDto.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\CartsShoppings\\CartActionResponseDto.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\CartActionResponseDto.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\CartsShoppings\\CartActionResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:41:41.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CartCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\CartCreateDto.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\CartsShoppings\\CartCreateDto.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\CartCreateDto.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\CartsShoppings\\CartCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:39:22.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CartDetailActionResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\Details\\CartDetailActionResponse.cs",
-              "RelativeDocumentMoniker": "CommercialManager.API\\Dtos\\CartsShoppings\\Details\\CartDetailActionResponse.cs",
-              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Dtos\\CartsShoppings\\Details\\CartDetailActionResponse.cs",
-              "RelativeToolTip": "CommercialManager.API\\Dtos\\CartsShoppings\\Details\\CartDetailActionResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:38:56.555Z",
+              "WhenOpened": "2025-04-23T19:37:35.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "UsersServices.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\UsersServices.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Services\\UsersServices.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\UsersServices.cs",
+              "RelativeToolTip": "CommercialManager.API\\Services\\UsersServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:34:29.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ShoppingCartsServices.cs",
               "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\ShoppingCartsServices.cs",
               "RelativeDocumentMoniker": "CommercialManager.API\\Services\\ShoppingCartsServices.cs",
               "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Services\\ShoppingCartsServices.cs",
               "RelativeToolTip": "CommercialManager.API\\Services\\ShoppingCartsServices.cs",
-              "ViewState": "AgIAABoAAAAAMzMzMzPzvzwBAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAzczMzMwuwCYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T06:31:05.678Z",
+              "WhenOpened": "2025-04-23T18:33:55.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SalesControllers.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "RelativeDocumentMoniker": "CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "ToolTip": "C:\\Users\\Victor\\projects\\Proyecto\\CommercialManager\\CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "RelativeToolTip": "CommercialManager.API\\Controllers\\SalesControllers.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAD4vzcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T17:23:05.812Z",
               "EditorCaption": ""
             }
           ]

@@ -18,7 +18,6 @@ namespace CommercialManager.API.Services
         private readonly IMapper _mapper;
         private readonly int PAGE_SIZE; 
         private readonly int PAGE_SIZE_LIMIT;
-
         public ShoppingCartsServices(CommercialDbContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
@@ -49,7 +48,7 @@ namespace CommercialManager.API.Services
                             {
                                 StatusCode = HttpStatusCode.BAD_REQUEST,
                                 Status = false,
-                                Message = "Registro no encontrado" // el usuario no existe
+                                Message = "Usuario no encontrado" // el usuario no existe
                             };
                         }
 
@@ -224,7 +223,7 @@ namespace CommercialManager.API.Services
                 {
                     StatusCode = HttpStatusCode.BAD_REQUEST,
                     Status = false,
-                    Message = "Registro no encontrado"
+                    Message = "Usuario o carrito no encontrado"
                 };
             }
 

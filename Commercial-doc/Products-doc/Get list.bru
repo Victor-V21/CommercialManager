@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{PATH}}/products
+  url: {{PATH}}/products?page=1&pageSize=10
   body: none
   auth: inherit
 }
 
 params:query {
-  ~page: 1
-  ~pageSize: 1
-  ~searchTerm: V
+  page: 1
+  pageSize: 10
+  ~searchTerm: Sam
 }
